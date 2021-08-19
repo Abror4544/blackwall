@@ -21,33 +21,33 @@ const preproc = sass;
 const path = {
     /* пути для папок с готовыми файлами */
     build: {
-        html: './app/build/',
-        js: './app/build/js/',
-        css: './app/build/css/',
-        images: './app/build/images/',
-        font: './app/build/fonts/',
+        html: './build/',
+        js: './build/js/',
+        css: './build/css/',
+        images: './build/images/',
+        font: './build/fonts/',
     },
     /* пути для папок с исходными файлами */
     src: {
-        html: ['./app/src/**/*.html','!./app/src/html_partial'],
-        htmlInclude: './app/src/html_partial',
-        style: './app/src/style/*.+(less|sass|scss|css)',
-        js: './app/src/js/**/*.js',
-        css: './app/src/css/',
-        images: './app/src/images/**/*.*',
-        font: './app/src/fonts/**/*.*',
+        html: ['./src/**/*.html','!./src/html_partial'],
+        htmlInclude: './src/html_partial',
+        style: './src/style/*.+(less|sass|scss|css)',
+        js: './src/js/**/*.js',
+        css: './src/css/',
+        images: './src/images/**/*.*',
+        font: './src/fonts/**/*.*',
     },
     /* просмотр файлов */
     watch: {
-        html: './app/src/**/*.html',
-        style: './app/src/style/**/*.*',
-        js: './app/src/js/**/*.js',
-        images: './app/src/images/**/*.*',
-        font: './app/src/fonts/**/*.*',
+        html: './src/**/*.html',
+        style: './src/style/**/*.*',
+        js: './src/js/**/*.js',
+        images: './src/images/**/*.*',
+        font: './src/fonts/**/*.*',
     },
     /* очистка сборки */
     clean: {
-        src: './app/build/**/*.*',
+        src: './build/**/*.*',
     },
 };
 
@@ -55,7 +55,7 @@ const path = {
 /* конфигурация локального сервера */
 const config = {
     server:{
-        baseDir: './app/build/'
+        baseDir: './build/'
     },
     tunnel: false,
     nitify: false,
