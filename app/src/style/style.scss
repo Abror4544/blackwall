@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    outline-style: none !important;
+    font-family: "Inter-Medium";
+    color: #18216d;
+}
+
+@import "content/fonts.scss", "content/header.scss", "content/menu.scss", "content/mixin.scss";
+
+/*-----------------Global Styles------------------*/
+
+::selection {
+    background: #29aae9;
+    color: #ffffff;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 5px #000000;
+    box-shadow: inset 0 0 5px #000000;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #29aae9;
+    border-radius: 10px;
+}
+
+.title {
+    font-size: 48px;
+    font-family: "Inter-SemiBold";
+    @include media(1199px) {
+        font-size: 30px;
+    }
+    @include media(767px) {
+        font-size: 28px;
+        text-align: center;
+    }
+}
+
+/*-----------------Global Styles------------------*/
+
+main {
+    .about {
+        @include flex(center, space-between);
+        @include media(991px) {
+            flex-direction: column;
+        }
+        &__info {
+            font-family: "Inter-SemiBold";
+            font-size: 36px;
+            width: 494px;
+            @include media(1199px) {
+                font-size: 28px;
+            }
+            @include media(991px) {
+                width: 100%;
+            }
+            @include media(767px) {
+                font-size: 20px;
+                line-height: 30px;
+            }
+        }
+
+        &__numbers {
+            @include flex();
+            @include media(991px) {
+                width: 100%;
+                margin-top: 22px;
+                justify-content: space-evenly;
+            }
+
+            &__state {
+                margin-left: 93px;
+                @include media(991px) {
+                    margin-left: 0;
+                }
+            }
+
+            &__number {
+                font-family: "Inter-Bold";
+                font-size: 60px;
+                line-height: 70px;
+                @include media(1199px) {
+                    font-size: 30px;
+                    line-height: normal;
+                }
+            }
+
+            &__icons {
+                margin: 10px 0 12px 0;
+                @include media(767px) {
+                    margin: 0;
+                }
+                img {
+                    @include media(767px) {
+                        width: 8.51px;
+                    }
+                }
+            }
+
+            &__desc {
+                font-family: "Inter-Regular";
+                font-size: 16px;
+                @include media(767px) {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .companySwiper {
+        padding: 50px 0;
+        @include media(767px) {
+            padding: 22px 0 50px;
+        }
+        .swiper-slide {
+            @include flex();
+            img {
+                @include media(991px) {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.features {
+    padding: 80px 0 50px 0;
+    @include media(767px) {
+        padding: 0 0 50px 0;
+    }
+    .title {
+        font-size: 48px;
+        line-height: 64px;
+        text-transform: capitalize;
+        text-align: center;
+        @include media(767px) {
+            font-size: 24px;
+            line-height: 24px;
+        }
+    }
+
+    &__desc {
+        font-family: "Inter-Regular";
+        font-size: 16px;
+        text-align: center;
+        width: 542px;
+        line-height: 30px;
+        margin: 12px auto 48px;
+        @include media(767px) {
+            width: 100%;
+            font-size: 14px;
+            line-height: 20px;
+            margin: 12px auto 40px;
+        }
+    }
+
+    .features__card {
+        @include media(991px) {
+            margin-bottom: 48px;
+        }
+        img {
+            @include media(767px) {
+                width: 48px;
+                height: 48px;
+            }
+        }
+        &__title {
+            font-family: "Inter-SemiBold";
+            margin: 28px 0 14px;
+            font-size: 24px;
+            line-height: 29px;
+            @include media(767px) {
+                font-size: 20px;
+                line-height: 24px;
+                margin: 20px 0 12px;
+            }
+        }
+
+        &__text {
+            font-family: "Inter-Regular";
+            font-size: 16px;
+            line-height: 26px;
+            margin-bottom: 30px;
+            @include media(767px) {
+                font-size: 14px;
+                line-height: 24px;
+                margin-bottom: 20px;
+                width: 320px;
+            }
+        }
+
+        &__link {
+            font-size: 20px;
+            line-height: 16px;
+        }
+    }
+}

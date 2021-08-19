@@ -1,0 +1,16 @@
+@mixin wh($maxW: max-, $minH: min-, $w: 100%, $h: 100vh){
+    #{$maxW}width: $w;
+    #{$minH}height: $h;
+}
+
+@mixin media($mw: 1200px){
+    @media screen and (max-width: $mw){
+        @content;
+    }
+}
+
+@mixin flex($a: center, $j: center){
+    display: flex;
+    align-items: $a;
+    justify-content: $j;
+}

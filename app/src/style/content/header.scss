@@ -1,0 +1,95 @@
+@import "mixin.scss";
+
+.header {
+    width: 100%;
+    padding-top: 25px;
+
+    .header__shadow {
+        width: 766px;
+        height: 766px;
+        left: -149px;
+        top: -147px;
+        background: #ff523d;
+        opacity: 0.05;
+        filter: blur(150px);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        @include media(767px) {
+            width: 394px;
+            height: 394px;
+            left: -111px;
+            top: -20px;
+            opacity: 0.15;
+        }
+    }
+
+    .header__wrapper {
+        @include flex(center, space-between);
+        padding: 40px 0 60px 0;
+        @include media(767px) {
+            flex-direction: column;
+        }
+    }
+
+    .header__content {
+        max-width: 500px;
+        @include media(767px) {
+            max-width: 100%;
+            @include flex();
+            flex-direction: column;
+        }
+        &__text {
+            font-family: "Inter-Regular";
+            font-size: 17px;
+            margin: 16px 0 34px 0;
+            @include media(767px) {
+                font-size: 14px;
+                text-align: center;
+                margin: 20px 0 33px 0;
+            }
+        }
+
+        &__link {
+            background: #00ecd0;
+            border-radius: 6px;
+            font-size: 17px;
+            padding: 22px 37px;
+            transition: 0.5s;
+            display: inline-block;
+            @include media(1199px) {
+                padding: 15px 20px;
+            }
+            @include media(767px) {
+                padding: 11px 17px 12px;
+                font-size: 14px;
+            }
+            &:hover {
+                color: #ffffff;
+                background: #000000;
+            }
+        }
+    }
+
+    &__img {
+        margin-left: -200px;
+        position: relative;
+        z-index: -1;
+        @include media(1199px) {
+            margin-left: 0;
+        }
+        @include media(767px) {
+            margin-top: 41px;
+        }
+        img {
+            @include media(1199px) {
+                width: 100%;
+            }
+            @include media(767px) {
+                width: 130%;
+                margin-left: -100px;
+            }
+        }
+    }
+}
